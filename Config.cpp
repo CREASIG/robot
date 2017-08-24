@@ -11,6 +11,8 @@
  * Created on 23 août 2017, 15:01
  */
 
+#include <cstring>
+
 #include "Config.h"
 
 using namespace std;
@@ -22,12 +24,6 @@ Config::Config() {
         printf("Config trouvée");
 
     } else {
-        std::ofstream fichier(( string(getenv("HOME"))+"/robot/config.cfg" ));
-        if (fichier.is_open()) {
-            fichier << "This is a line.\n";
-            fichier << "This is another line.\n";
-            fichier.close();
-        }
         printf("Config non trouvée\n");
     }
 }
@@ -36,6 +32,21 @@ Config::Config(const Config& orig) {
 }
 
 Config::~Config() {
+    generateConfig();
     fichier.close();
 }
 
+void Config::generateConfig(){
+        std::ofstream fichier(( string(getenv("HOME"))+"/robot/config.cfg" ));
+        if (fichier.is_open()) {
+            servoLeft1="&dd";
+            fichier << "ServoLeft1="<<servoLeft1<<"\n";
+            fichier << "This is another line.\n";
+            fichier.close();
+            string b;
+            b.append("cat " );
+            b.append(getenv("HOME") );
+            b.append("/robot/config.cfg" );
+            system(b.c_str());
+        }
+}

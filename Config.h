@@ -18,15 +18,15 @@
 #include <fstream>
 #include <cstdio>
 
-
 class Config {
-
 public:
     Config();
     Config(const Config& orig);
     virtual ~Config();
-private:
+    void generateConfig();
 
+private:
+    char* servoLeft1;
     std::ifstream fichier;
 
 };
