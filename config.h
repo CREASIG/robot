@@ -14,9 +14,15 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
+#include "Servo.h"
+
+
 #include <ios>
 #include <fstream>
 #include <cstdio>
+#include <cstring>
+#include <cstdlib>
+
 
 class Config {
 public:
@@ -26,7 +32,19 @@ public:
     void generateConfig();
 
 private:
-    char* servoLeft1;
+    Servo servoGaucheRotationCuisse;
+    Servo servoGaucheAvancerCuisse;
+    Servo servoGaucheTranslationCuisse;
+    Servo servoGaucheGenoux;
+    Servo servoGaucheRotationChevilleAvant;
+    Servo servoGaucheRotationChevilleCote;
+
+    Servo servoDroitRotationCuisse;
+    Servo servoDroitAvancerCuisse;
+    Servo servoDroitTranslationCuisse;
+    Servo servoDroitGenoux;
+    Servo servoDroitRotationChevilleAvant;
+    Servo servoDroitRotationChevilleCote;
     std::ifstream fichier;
 
 };

@@ -14,7 +14,7 @@
 #include <cstdlib>
 #include <cstdio>
 
-#include "Config.h"
+#include "config.h"
 
 
 
