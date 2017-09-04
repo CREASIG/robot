@@ -14,6 +14,10 @@
 #ifndef SERVO_H
 #define SERVO_H
 
+#include <cstring>
+#include <string>
+
+using namespace std;
 
 
 class Servo {

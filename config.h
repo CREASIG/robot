@@ -16,22 +16,26 @@
 
 #include "Servo.h"
 
-
-#include <ios>
+#include <iostream>
 #include <fstream>
+
 #include <cstdio>
 #include <cstring>
 #include <cstdlib>
 
+
+using namespace std;
 
 class Config {
 public:
     Config();
     Config(const Config& orig);
     virtual ~Config();
+    void lectureConfig(string config);
     void generateConfig();
 
 private:
+
     Servo servoGaucheRotationCuisse;
     Servo servoGaucheAvancerCuisse;
     Servo servoGaucheTranslationCuisse;
@@ -45,7 +49,7 @@ private:
     Servo servoDroitGenoux;
     Servo servoDroitRotationChevilleAvant;
     Servo servoDroitRotationChevilleCote;
-    std::ifstream fichier;
+    ifstream fichier;
 
 };
 
