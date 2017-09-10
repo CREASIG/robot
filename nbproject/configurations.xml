@@ -4,6 +4,9 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>AfficheurSimple.h</itemPath>
+      <itemPath>GPIOClass.h</itemPath>
+      <itemPath>Gyroscope.h</itemPath>
       <itemPath>Servo.h</itemPath>
       <itemPath>config.h</itemPath>
     </logicalFolder>
@@ -14,6 +17,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>AfficheurSimple.cpp</itemPath>
+      <itemPath>GPIOClass.cpp</itemPath>
+      <itemPath>Gyroscope.cpp</itemPath>
       <itemPath>Servo.cpp</itemPath>
       <itemPath>config.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
@@ -40,6 +46,18 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="AfficheurSimple.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AfficheurSimple.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GPIOClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GPIOClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Gyroscope.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Gyroscope.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Servo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Servo.h" ex="false" tool="3" flavor2="0">
@@ -71,6 +89,18 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="AfficheurSimple.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AfficheurSimple.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GPIOClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GPIOClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Gyroscope.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Gyroscope.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Servo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Servo.h" ex="false" tool="3" flavor2="0">

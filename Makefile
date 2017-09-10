@@ -54,7 +54,7 @@ CCADMIN=CCadmin
 build: .build-post
 
 .build-pre:
-# Add your pre 'build' code here...
+	scp -r eric@192.168.10.15:/home/eric/NetBeansProjects/robot/* /home/pi/NetBeansProjects/robot/
 
 .build-post: .build-impl
 # Add your post 'build' code here...

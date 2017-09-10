@@ -13,23 +13,69 @@
 
 #include <cstdlib>
 #include <cstdio>
+#include <iostream>
+#include <unistd.h>
+#include <errno.h>
+#include <stdio.h>
 
-#include "config.h"
-
+#include "GPIOClass.h"
+//#include "config.h"
+#include "AfficheurSimple.h"
+#include "Gyroscope.h"
 
 
 using namespace std;
-Config config;
+//Config config;
+
 /*
  * 
  */
 int main(int argc, char** argv) {
+
+    printf("debut du programme\n");
+
+    Gyroscope g;
+
+    /*
+    AfficheurSimple aff;
+    int i = 0;
+    while (true) {
+        aff.afficher(i);
+        usleep(500000);
+        i++;
+        if (i == 10) {
+            i = 0;
+        }
+
+    }
+*/
+
+    /*
+        GPIOClass* gpio4 = new GPIOClass("6");
+        gpio4->export_gpio(); //export GPIO4
+
+        cout << " GPIO pins exported" << endl;
+
+        gpio4->setdir_gpio("out"); // GPIO17 set to input
+        bool val = true;
+        while (1) {
+            usleep(50000); // wait for 0.5 seconds
+            if (val) {
+                gpio4->setval_gpio("1");
+                val = false;
+            } else {
+                gpio4->setval_gpio("0");
+                val = true;
+            }
+        }
+     */
+    printf("fin\n");
+
     //system("coucou");
-    printf("ddd");
-    
-    
-    
-    
+
+
+
+
     return 0;
 }
 

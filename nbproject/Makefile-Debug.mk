@@ -35,6 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/AfficheurSimple.o \
+	${OBJECTDIR}/GPIOClass.o \
+	${OBJECTDIR}/Gyroscope.o \
 	${OBJECTDIR}/Servo.o \
 	${OBJECTDIR}/config.o \
 	${OBJECTDIR}/main.o
@@ -63,6 +66,21 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/robot: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/robot ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/AfficheurSimple.o: AfficheurSimple.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AfficheurSimple.o AfficheurSimple.cpp
+
+${OBJECTDIR}/GPIOClass.o: GPIOClass.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/GPIOClass.o GPIOClass.cpp
+
+${OBJECTDIR}/Gyroscope.o: Gyroscope.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gyroscope.o Gyroscope.cpp
 
 ${OBJECTDIR}/Servo.o: Servo.cpp 
 	${MKDIR} -p ${OBJECTDIR}
