@@ -14,7 +14,7 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-#include "Servo.h"
+//#include "Servo.h"
 
 #include <iostream>
 #include <fstream>
@@ -35,7 +35,7 @@ public:
     void generateConfig();
 
 private:
-
+/*
     Servo servoGaucheRotationCuisse;
     Servo servoGaucheAvancerCuisse;
     Servo servoGaucheTranslationCuisse;
@@ -49,6 +49,7 @@ private:
     Servo servoDroitGenoux;
     Servo servoDroitRotationChevilleAvant;
     Servo servoDroitRotationChevilleCote;
+*/
     ifstream fichier;
 
 };

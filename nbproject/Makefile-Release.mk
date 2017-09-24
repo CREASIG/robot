@@ -35,12 +35,14 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/AccesI2c.o \
 	${OBJECTDIR}/AfficheurSimple.o \
 	${OBJECTDIR}/GPIOClass.o \
 	${OBJECTDIR}/Gyroscope.o \
-	${OBJECTDIR}/Servo.o \
 	${OBJECTDIR}/config.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/nbproject/servo/MG90D.o \
+	${OBJECTDIR}/nbproject/servo/Servo.o
 
 
 # C Compiler Flags
@@ -67,6 +69,11 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/robot: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/robot ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/AccesI2c.o: AccesI2c.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AccesI2c.o AccesI2c.cpp
+
 ${OBJECTDIR}/AfficheurSimple.o: AfficheurSimple.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -82,11 +89,6 @@ ${OBJECTDIR}/Gyroscope.o: Gyroscope.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gyroscope.o Gyroscope.cpp
 
-${OBJECTDIR}/Servo.o: Servo.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Servo.o Servo.cpp
-
 ${OBJECTDIR}/config.o: config.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -96,6 +98,16 @@ ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/nbproject/servo/MG90D.o: nbproject/servo/MG90D.cpp 
+	${MKDIR} -p ${OBJECTDIR}/nbproject/servo
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/nbproject/servo/MG90D.o nbproject/servo/MG90D.cpp
+
+${OBJECTDIR}/nbproject/servo/Servo.o: nbproject/servo/Servo.cpp 
+	${MKDIR} -p ${OBJECTDIR}/nbproject/servo
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/nbproject/servo/Servo.o nbproject/servo/Servo.cpp
 
 # Subprojects
 .build-subprojects:

@@ -4,10 +4,12 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>AccesI2c.h</itemPath>
       <itemPath>AfficheurSimple.h</itemPath>
       <itemPath>GPIOClass.h</itemPath>
       <itemPath>Gyroscope.h</itemPath>
-      <itemPath>Servo.h</itemPath>
+      <itemPath>nbproject/servo/MG90D.h</itemPath>
+      <itemPath>nbproject/servo/Servo.h</itemPath>
       <itemPath>config.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -17,10 +19,12 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>AccesI2c.cpp</itemPath>
       <itemPath>AfficheurSimple.cpp</itemPath>
       <itemPath>GPIOClass.cpp</itemPath>
       <itemPath>Gyroscope.cpp</itemPath>
-      <itemPath>Servo.cpp</itemPath>
+      <itemPath>nbproject/servo/MG90D.cpp</itemPath>
+      <itemPath>nbproject/servo/Servo.cpp</itemPath>
       <itemPath>config.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -46,6 +50,10 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="AccesI2c.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AccesI2c.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="AfficheurSimple.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="AfficheurSimple.h" ex="false" tool="3" flavor2="0">
@@ -58,15 +66,19 @@
       </item>
       <item path="Gyroscope.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Servo.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Servo.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="config.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="config.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="nbproject/servo/MG90D.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="nbproject/servo/MG90D.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nbproject/servo/Servo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="nbproject/servo/Servo.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -89,6 +101,10 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="AccesI2c.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AccesI2c.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="AfficheurSimple.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="AfficheurSimple.h" ex="false" tool="3" flavor2="0">
@@ -101,15 +117,19 @@
       </item>
       <item path="Gyroscope.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Servo.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Servo.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="config.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="config.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="nbproject/servo/MG90D.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="nbproject/servo/MG90D.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nbproject/servo/Servo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="nbproject/servo/Servo.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
