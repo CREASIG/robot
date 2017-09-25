@@ -44,7 +44,7 @@ Servo::Servo(AccesI2c *accesi2c, uint8_t numerocarte, uint8_t numeroservo) {
 Servo::Servo(const Servo& orig) {
 }
 
-Servo::~Servo() {
+ Servo::~Servo() {
 }
 
 uint Servo::getValeur() {

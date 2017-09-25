@@ -41,8 +41,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/Gyroscope.o \
 	${OBJECTDIR}/config.o \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/nbproject/servo/MG90D.o \
-	${OBJECTDIR}/nbproject/servo/Servo.o
+	${OBJECTDIR}/servo/MG90D.o \
+	${OBJECTDIR}/servo/Servo.o
 
 
 # C Compiler Flags
@@ -99,15 +99,15 @@ ${OBJECTDIR}/main.o: main.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
-${OBJECTDIR}/nbproject/servo/MG90D.o: nbproject/servo/MG90D.cpp 
-	${MKDIR} -p ${OBJECTDIR}/nbproject/servo
+${OBJECTDIR}/servo/MG90D.o: servo/MG90D.cpp 
+	${MKDIR} -p ${OBJECTDIR}/servo
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/nbproject/servo/MG90D.o nbproject/servo/MG90D.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/servo/MG90D.o servo/MG90D.cpp
 
-${OBJECTDIR}/nbproject/servo/Servo.o: nbproject/servo/Servo.cpp 
-	${MKDIR} -p ${OBJECTDIR}/nbproject/servo
+${OBJECTDIR}/servo/Servo.o: servo/Servo.cpp 
+	${MKDIR} -p ${OBJECTDIR}/servo
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/nbproject/servo/Servo.o nbproject/servo/Servo.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/servo/Servo.o servo/Servo.cpp
 
 # Subprojects
 .build-subprojects:

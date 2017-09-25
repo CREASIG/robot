@@ -8,8 +8,8 @@
       <itemPath>AfficheurSimple.h</itemPath>
       <itemPath>GPIOClass.h</itemPath>
       <itemPath>Gyroscope.h</itemPath>
-      <itemPath>nbproject/servo/MG90D.h</itemPath>
-      <itemPath>nbproject/servo/Servo.h</itemPath>
+      <itemPath>servo/MG90D.h</itemPath>
+      <itemPath>servo/Servo.h</itemPath>
       <itemPath>config.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -23,8 +23,8 @@
       <itemPath>AfficheurSimple.cpp</itemPath>
       <itemPath>GPIOClass.cpp</itemPath>
       <itemPath>Gyroscope.cpp</itemPath>
-      <itemPath>nbproject/servo/MG90D.cpp</itemPath>
-      <itemPath>nbproject/servo/Servo.cpp</itemPath>
+      <itemPath>servo/MG90D.cpp</itemPath>
+      <itemPath>servo/Servo.cpp</itemPath>
       <itemPath>config.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -44,7 +44,7 @@
   <confs>
     <conf name="Debug" type="1">
       <toolsSet>
-        <compilerSet>default</compilerSet>
+        <compilerSet>GNU|GNU</compilerSet>
         <dependencyChecking>true</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
@@ -72,13 +72,13 @@
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="nbproject/servo/MG90D.cpp" ex="false" tool="1" flavor2="0">
+      <item path="servo/MG90D.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="nbproject/servo/MG90D.h" ex="false" tool="3" flavor2="0">
+      <item path="servo/MG90D.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="nbproject/servo/Servo.cpp" ex="false" tool="1" flavor2="0">
+      <item path="servo/Servo.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="nbproject/servo/Servo.h" ex="false" tool="3" flavor2="0">
+      <item path="servo/Servo.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -123,13 +123,13 @@
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="nbproject/servo/MG90D.cpp" ex="false" tool="1" flavor2="0">
+      <item path="servo/MG90D.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="nbproject/servo/MG90D.h" ex="false" tool="3" flavor2="0">
+      <item path="servo/MG90D.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="nbproject/servo/Servo.cpp" ex="false" tool="1" flavor2="0">
+      <item path="servo/Servo.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="nbproject/servo/Servo.h" ex="false" tool="3" flavor2="0">
+      <item path="servo/Servo.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

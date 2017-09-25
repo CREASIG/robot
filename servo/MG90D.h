@@ -29,7 +29,7 @@ public:
     MG90D(const MG90D& orig);
     virtual ~MG90D();
     
-    void setAngle(int angle);
+    virtual void setAngle(int angle);
     
 private:
 

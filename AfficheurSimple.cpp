@@ -12,10 +12,12 @@
  */
 
 #include <iostream>
+#include <stdio.h>
 
 #include "AfficheurSimple.h"
 
 AfficheurSimple::AfficheurSimple() {
+    
     printf("initialisation afficheur\n");
 
     rclk = new GPIOClass("19");

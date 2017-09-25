@@ -14,7 +14,7 @@
 #include <stdint.h>
 
 #include "AccesI2c.h"
-#include "Servo.h"
+#include "servo/Servo.h"
 
 AccesI2c::AccesI2c() {
     char nomfichier[20];

@@ -20,7 +20,7 @@
 
 #include <iostream>
 
-#include "../../AccesI2c.h"
+#include "../AccesI2c.h"
 
 #define __MODE1 0x00
 #define __MODE2 0x01
@@ -58,7 +58,7 @@ public:
     void setValeur(uint on, uint off);
     void setAllValeur(uint on, uint off);
     
-     virtual void setAngle(int angle);
+    virtual void setAngle(int angle)=0;
 
     void setFrequence(int frequence);
 

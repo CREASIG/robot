@@ -22,8 +22,8 @@
 //#include "config.h"
 //#include "AfficheurSimple.h"
 //#include "Gyroscope.h"
-#include "Servo.h"
-#include "nbproject/servo/MG90D.h"
+#include "./servo/Servo.h"
+#include "./servo/MG90D.h"
 
 
 using namespace std;
@@ -39,30 +39,16 @@ int main(int argc, char** argv) {
     AccesI2c accesi2c;
 
     Servo* s=new MG90D(&accesi2c, 0x6F, 0);
-    int i = 1750;
     int frequence = 50;
-    int a = 0;
     s->setFrequence(frequence);
-    int c = (0xFFF * 1) / 20;
-    int d = (0xFFF * 2) / 20;
-    c = 158;
-    d = 500;
     while (true) {
-        //        s.setFrequence(frequence);
-
-        usleep(200000);
-        cout << "fréquence=" << frequence << "  c=" << c << "  d=" << d << endl;
-        s->setAngle(60);
-        //d++;
-        cout << c << endl;
-        usleep(2000000);
-        s->setAngle(-60);
-        cout << d << endl;
-        //        s.setValeur(2000, 0xFFF-2000);
-        usleep(2000000);
-        //        frequence ++;
-        //        i+=10;
-        //        cin >> a;
+//        s->setAngle(60);
+//        usleep(2000000);
+//        s->setAngle(-60);
+//        usleep(2000000);
+        int a = 0;
+        cin >> a;
+        s->setAngle(a);
     }
     //    Gyroscope g;
 
