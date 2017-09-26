@@ -18,9 +18,7 @@
 #include <errno.h>
 #include <stdio.h>
 
-//#include "GPIOClass.h"
 //#include "config.h"
-//#include "AfficheurSimple.h"
 //#include "Gyroscope.h"
 #include "./servo/Servo.h"
 #include "./servo/MG90D.h"
@@ -36,61 +34,24 @@ int main(int argc, char** argv) {
 
     printf("debut du programme\n");
 
+    //Création de l'objet donnat l'accès au port I2C
     AccesI2c accesi2c;
 
+    // Création de l'objet pour l'accès au servo 0 de la carte 6F
     Servo* s=new MG90D(&accesi2c, 0x6F, 0);
-    int frequence = 50;
-    s->setFrequence(frequence);
+    
+    // fréquence du signal qui pilote le servo à 50hz
+    s->setFrequence(50);
     while (true) {
-//        s->setAngle(60);
-//        usleep(2000000);
-//        s->setAngle(-60);
-//        usleep(2000000);
         int a = 0;
+        
+        // Récupération de l'angle auprès de l'utilisateur
         cin >> a;
+        
+        //Mise en place de l'angle
         s->setAngle(a);
     }
-    //    Gyroscope g;
-
-    /*
-    AfficheurSimple aff;
-    int i = 0;
-    while (true) {
-        aff.afficher(i);
-        usleep(500000);
-        i++;
-        if (i == 10) {
-            i = 0;
-        }
-
-    }
-     */
-
-    /*
-        GPIOClass* gpio4 = new GPIOClass("6");
-        gpio4->export_gpio(); //export GPIO4
-
-        cout << " GPIO pins exported" << endl;
-
-        gpio4->setdir_gpio("out"); // GPIO17 set to input
-        bool val = true;
-        while (1) {
-            usleep(50000); // wait for 0.5 seconds
-            if (val) {
-                gpio4->setval_gpio("1");
-                val = false;
-            } else {
-                gpio4->setval_gpio("0");
-                val = true;
-            }
-        }
-     */
     printf("fin\n");
-
-    //system("coucou");
-
-
-
 
     return 0;
 }

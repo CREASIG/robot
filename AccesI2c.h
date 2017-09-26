@@ -39,9 +39,20 @@ public:
     void selectionComposant(int adresse);
 
     /*
-     
+     écrire dans le registre de la carte une valeur de 8bit à l'adresse indiquée
+     * 
+     * Paramètres :
+     * int adresse : adresse du registre
+     * uint8_t valeur : valeur
      */
     void ecrireRegistre8bit(int adresse, uint8_t valeur);
+
+    /*
+     * Récupère la valeur dans le registre de la carte à l'adresse indiquée
+     * 
+     * Paramètres :
+     * int adresse : adresse du registre
+     */
     int lectureRegistre8bit(int adresse);
 
 void ecrireRegistre16bit(int adresse, __u16 valeur);    

@@ -7,10 +7,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/eric/NetBeansProjects/robot/Servo.h</file>
+            <file>file:/home/eric/NetBeansProjects/robot/Makefile</file>
+            <file>file:/home/eric/NetBeansProjects/robot/servo/Servo.h</file>
+            <file>file:/home/eric/NetBeansProjects/robot/servo/MG90D.cpp</file>
+            <file>file:/home/eric/NetBeansProjects/robot/servo/MG90D.h</file>
             <file>file:/home/eric/NetBeansProjects/robot/AccesI2c.h</file>
+            <file>file:/home/eric/NetBeansProjects/robot/servo/Servo.cpp</file>
             <file>file:/home/eric/NetBeansProjects/robot/AccesI2c.cpp</file>
-            <file>file:/home/eric/NetBeansProjects/robot/Servo.cpp</file>
             <file>file:/home/eric/NetBeansProjects/robot/main.cpp</file>
         </group>
     </open-files>

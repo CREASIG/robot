@@ -29,6 +29,7 @@ public:
     MG90D(const MG90D& orig);
     virtual ~MG90D();
     
+    // Mettre le servo dans un angle particulier
     virtual void setAngle(int angle);
     
 private:

@@ -51,15 +51,23 @@ using namespace std;
 
 class Servo {
 public:
+    
+    /*
+     Création du servo
+     * Paramètres:
+     * 
+     * AccesI2c *accesi2c : connecteur I2C
+     * uint8_t numerocarte : numéro de la carte I2C
+     * uint8_t numeroservo : numéro du port du servo
+     * 
+     */
     Servo(AccesI2c *accesi2c, uint8_t numerocarte, uint8_t numeroservo);
     Servo(const Servo& orig);
 
-    uint getValeur();
-    void setValeur(uint on, uint off);
-    void setAllValeur(uint on, uint off);
-    
+    // Mettre un servo à un angle particulier
     virtual void setAngle(int angle)=0;
 
+    // Assigner une fréquence au signal envoyé au servo
     void setFrequence(int frequence);
 
     /*
@@ -92,6 +100,16 @@ public:
 
     virtual ~Servo();
 private:
+    //récupérer la valeur envoyé pour le servo
+    uint getValeur();
+    
+    // Mettre une valeur au servo
+    void setValeur(uint on, uint off);
+    
+    //Mettre une valeur à tous les servo
+    void setAllValeur(uint on, uint off);
+    
+
     uint8_t adressecarte;
     uint8_t adresseservo;
     char* initialisation;
