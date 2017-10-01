@@ -97,9 +97,6 @@ public:
      */
     char* getInitialisation();
     void setInitialisation(char* init);
-
-    virtual ~Servo();
-private:
     //récupérer la valeur envoyé pour le servo
     uint getValeur();
     
@@ -109,6 +106,9 @@ private:
     //Mettre une valeur à tous les servo
     void setAllValeur(uint on, uint off);
     
+
+    virtual ~Servo();
+private:
 
     uint8_t adressecarte;
     uint8_t adresseservo;

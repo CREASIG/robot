@@ -22,7 +22,6 @@ Servo::Servo(AccesI2c *accesi2c, uint8_t numerocarte, uint8_t numeroservo) {
     this->adressecarte = numerocarte;
     this->adresseservo = numeroservo;
     this->accesservo = accesi2c;
-    initialisation = (char*) "3";
     accesservo->selectionComposant(numerocarte);
     cout << "écriture dans __MODE2" << endl;
 //    accesservo->ecrireRegistre8bit(__MODE2, __OUTDRV);
