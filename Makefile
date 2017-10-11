@@ -54,7 +54,8 @@ CCADMIN=CCadmin
 build: .build-post
 
 .build-pre:
-	scp -r eric@ordi:/home/eric/NetBeansProjects/robot/* /home/pi/NetBeansProjects/robot/
+		scp -r eric@ordi:/home/eric/NetBeansProjects/robot/* /home/pi/NetBeansProjects/robot/
+		scp -r eric@ordi:/home/eric/NetBeansProjects/robot/html/* /var/www/html
 
 .build-post: .build-impl
 # Add your post 'build' code here...

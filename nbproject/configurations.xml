@@ -6,9 +6,12 @@
                    projectFiles="true">
       <itemPath>AccesI2c.h</itemPath>
       <itemPath>AfficheurSimple.h</itemPath>
+      <itemPath>Echange.h</itemPath>
       <itemPath>GPIOClass.h</itemPath>
       <itemPath>Gyroscope.h</itemPath>
+      <itemPath>Information.h</itemPath>
       <itemPath>servo/MG90D.h</itemPath>
+      <itemPath>Serveur.h</itemPath>
       <itemPath>servo/Servo.h</itemPath>
       <itemPath>config.h</itemPath>
     </logicalFolder>
@@ -21,9 +24,12 @@
                    projectFiles="true">
       <itemPath>AccesI2c.cpp</itemPath>
       <itemPath>AfficheurSimple.cpp</itemPath>
+      <itemPath>Echange.cpp</itemPath>
       <itemPath>GPIOClass.cpp</itemPath>
       <itemPath>Gyroscope.cpp</itemPath>
+      <itemPath>Information.cpp</itemPath>
       <itemPath>servo/MG90D.cpp</itemPath>
+      <itemPath>Serveur.cpp</itemPath>
       <itemPath>servo/Servo.cpp</itemPath>
       <itemPath>config.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
@@ -39,6 +45,9 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>html/index.html</itemPath>
+    <itemPath>html/liaison.php</itemPath>
+    <itemPath>html/script.js</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -49,6 +58,14 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <ccTool>
+          <commandLine>-lpthread</commandLine>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibStdlibItem>PosixThreads</linkerLibStdlibItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
       <item path="AccesI2c.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -58,6 +75,10 @@
       </item>
       <item path="AfficheurSimple.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Echange.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Echange.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="GPIOClass.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="GPIOClass.h" ex="false" tool="3" flavor2="0">
@@ -66,9 +87,23 @@
       </item>
       <item path="Gyroscope.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Information.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Information.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Serveur.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Serveur.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="config.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="html/index.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="html/liaison.php" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="html/script.js" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -109,6 +144,10 @@
       </item>
       <item path="AfficheurSimple.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Echange.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Echange.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="GPIOClass.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="GPIOClass.h" ex="false" tool="3" flavor2="0">
@@ -117,9 +156,23 @@
       </item>
       <item path="Gyroscope.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Information.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Information.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Serveur.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Serveur.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="config.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="html/index.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="html/liaison.php" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="html/script.js" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

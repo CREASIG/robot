@@ -37,8 +37,11 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/AccesI2c.o \
 	${OBJECTDIR}/AfficheurSimple.o \
+	${OBJECTDIR}/Echange.o \
 	${OBJECTDIR}/GPIOClass.o \
 	${OBJECTDIR}/Gyroscope.o \
+	${OBJECTDIR}/Information.o \
+	${OBJECTDIR}/Serveur.o \
 	${OBJECTDIR}/config.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/servo/MG90D.o \
@@ -49,8 +52,8 @@ OBJECTFILES= \
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=
-CXXFLAGS=
+CCFLAGS=-lpthread
+CXXFLAGS=-lpthread
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -59,7 +62,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=
+LDLIBSOPTIONS=-lpthread
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -79,6 +82,11 @@ ${OBJECTDIR}/AfficheurSimple.o: AfficheurSimple.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AfficheurSimple.o AfficheurSimple.cpp
 
+${OBJECTDIR}/Echange.o: Echange.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Echange.o Echange.cpp
+
 ${OBJECTDIR}/GPIOClass.o: GPIOClass.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -88,6 +96,16 @@ ${OBJECTDIR}/Gyroscope.o: Gyroscope.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gyroscope.o Gyroscope.cpp
+
+${OBJECTDIR}/Information.o: Information.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Information.o Information.cpp
+
+${OBJECTDIR}/Serveur.o: Serveur.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Serveur.o Serveur.cpp
 
 ${OBJECTDIR}/config.o: config.cpp 
 	${MKDIR} -p ${OBJECTDIR}
