@@ -39,16 +39,19 @@ string Echange::getInformation() {
 
 string Echange::getDebug() {
     string texte = "{\"liste\":[";
-    for (int i = 0 ; i < log.size() ; --i){
-        if(i>0)texte+=",";
-        texte += "{\"texte\": \"" + log[i] +"\"}";
+    for (int i = log.size(); i > 0; --i) {
+        if (i < log.size())texte += ",";
+        texte += "{\"texte\": \"" + log[i] + "\"}";
     }
     texte += "]}";
-    
     return texte;
 }
 
 string Echange::setParametre(string parametre) {
+    string nom = parametre.substr(0, parametre.find(" "));
+    string valeur = parametre.substr(parametre.find(" "), parametre.size() - parametre.find(" "));
+
+    cout << "nom=" << nom << "    valeur=" << valeur << endl;
     return "{}";
 }
 
@@ -91,6 +94,6 @@ void Echange::addLog(string message) {
     }
 }
 
-vector<string> Echange::getLogs(){
+vector<string> Echange::getLogs() {
     return this->log;
 }

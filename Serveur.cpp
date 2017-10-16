@@ -67,12 +67,6 @@ Serveur::Serveur(Echange *echange) {
         newsockfd = accept(sockfd, (struct sockaddr *) &cli_addr, &clilen);
         if (newsockfd < 0)
             fprintf(stderr, "ERROR on accept");
-        echange->addLog("coucou");
-        // printf("server: got connection from %s port %d\n",inet_ntoa(cli_addr.sin_addr), ntohs(cli_addr.sin_port));
-
-
-        // This send() function sends the 13 bytes of the string to the new socket
-        //send(newsockfd, "Hello, world!\n", 13, 0);
 
         bzero(buffer, 256);
 
@@ -90,8 +84,6 @@ Serveur::Serveur(Echange *echange) {
         } else {
 
         }
-        cout << "Here is the message: " << buffer << endl;
-
         close(newsockfd);
     }
     close(sockfd);

@@ -49,6 +49,7 @@
     <itemPath>html/index.html</itemPath>
     <itemPath>html/liaison.php</itemPath>
     <itemPath>html/script.js</itemPath>
+    <itemPath>html/setparameter.php</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -107,6 +108,8 @@
       <item path="html/liaison.php" ex="false" tool="3" flavor2="0">
       </item>
       <item path="html/script.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="html/setparameter.php" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -178,6 +181,8 @@
       <item path="html/liaison.php" ex="false" tool="3" flavor2="0">
       </item>
       <item path="html/script.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="html/setparameter.php" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

@@ -9,13 +9,10 @@
         <group>
             <file>file:/home/eric/NetBeansProjects/robot/Serveur.cpp</file>
             <file>file:/home/eric/NetBeansProjects/robot/html/connexion.php</file>
-            <file>file:/home/eric/NetBeansProjects/robot/Information.cpp</file>
+            <file>file:/home/eric/NetBeansProjects/robot/Echange.cpp</file>
             <file>file:/home/eric/NetBeansProjects/robot/html/index.html</file>
-            <file>file:/home/eric/NetBeansProjects/robot/Serveur.h</file>
-            <file>file:/home/eric/NetBeansProjects/robot/Information.h</file>
+            <file>file:/home/eric/NetBeansProjects/robot/html/debug.php</file>
             <file>file:/home/eric/NetBeansProjects/robot/html/script.js</file>
-            <file>file:/home/eric/NetBeansProjects/robot/main.cpp</file>
-            <file>file:/home/eric/NetBeansProjects/robot/html/donnees.php</file>
         </group>
     </open-files>
 </project-private>

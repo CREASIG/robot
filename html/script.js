@@ -33,11 +33,11 @@ $(document).ready(function () {
     function avancer() {
         $.ajax({
             method: "POST",
-            url: "donnees.php",
+            url: "setparameter.php",
             data: {name: "John", location: "Boston"}
         })
                 .done(function (msg) {
-                    alert("Data Saved: " + msg);
+                    //alert("Data Saved: " + msg);
                 });
         console.log("avancer");
     }

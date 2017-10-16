@@ -24,6 +24,7 @@ class Connexion {
     }
 
     public function lire($message) {
+        $this->initialise();
         socket_write($this->socket, $message, strlen($message)) or die("Impossible de demander des informations au robot");
 // get server response
         $message = "";
@@ -31,11 +32,14 @@ class Connexion {
             $message1 = socket_read($this->socket, 1024) ;
             $message.=$message1;
         } while ($message1 != "");
+        $this->fermer();
         return $message;
     }
 
     public function ecrire($message) {
+        $this->initialise();
         socket_write($this->socket, $message, strlen($message)) or die("Impossible d'envoyer des paramètres au robot");
+        $this->fermer();
     }
 
 }
