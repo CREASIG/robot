@@ -9,7 +9,6 @@
       <itemPath>Echange.h</itemPath>
       <itemPath>GPIOClass.h</itemPath>
       <itemPath>Gyroscope.h</itemPath>
-      <itemPath>Information.h</itemPath>
       <itemPath>servo/MG90D.h</itemPath>
       <itemPath>Serveur.h</itemPath>
       <itemPath>servo/Servo.h</itemPath>
@@ -27,7 +26,6 @@
       <itemPath>Echange.cpp</itemPath>
       <itemPath>GPIOClass.cpp</itemPath>
       <itemPath>Gyroscope.cpp</itemPath>
-      <itemPath>Information.cpp</itemPath>
       <itemPath>servo/MG90D.cpp</itemPath>
       <itemPath>Serveur.cpp</itemPath>
       <itemPath>servo/Servo.cpp</itemPath>
@@ -45,6 +43,9 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>html/connexion.php</itemPath>
+    <itemPath>html/debug.php</itemPath>
+    <itemPath>html/donnees.php</itemPath>
     <itemPath>html/index.html</itemPath>
     <itemPath>html/liaison.php</itemPath>
     <itemPath>html/script.js</itemPath>
@@ -87,10 +88,6 @@
       </item>
       <item path="Gyroscope.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Information.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Information.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="Serveur.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Serveur.h" ex="false" tool="3" flavor2="0">
@@ -98,6 +95,12 @@
       <item path="config.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="html/connexion.php" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="html/debug.php" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="html/donnees.php" ex="false" tool="3" flavor2="0">
       </item>
       <item path="html/index.html" ex="false" tool="3" flavor2="0">
       </item>
@@ -156,10 +159,6 @@
       </item>
       <item path="Gyroscope.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Information.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Information.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="Serveur.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Serveur.h" ex="false" tool="3" flavor2="0">
@@ -167,6 +166,12 @@
       <item path="config.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="html/connexion.php" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="html/debug.php" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="html/donnees.php" ex="false" tool="3" flavor2="0">
       </item>
       <item path="html/index.html" ex="false" tool="3" flavor2="0">
       </item>

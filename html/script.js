@@ -31,6 +31,14 @@ $(document).ready(function () {
     });
 
     function avancer() {
+        $.ajax({
+            method: "POST",
+            url: "donnees.php",
+            data: {name: "John", location: "Boston"}
+        })
+                .done(function (msg) {
+                    alert("Data Saved: " + msg);
+                });
         console.log("avancer");
     }
     function droite() {
@@ -42,5 +50,26 @@ $(document).ready(function () {
     function reculer() {
         console.log("reculer");
     }
+
+    $("#debug").click(function () {
+        $.ajax({
+            method: "POST",
+            url: "debug.php",
+            data: {name: "John"}
+        })
+                .done(function (msg) {
+                    console.log(msg);
+                    log = JSON.parse(msg);
+                    console.log(log["liste"]);
+                    var texte="";
+                    for(var i = 0 ; i < log["liste"].length ; i++){
+                        texte+=log["liste"][i]["texte"]+"\n";
+                    }
+                    console.log(texte);
+                    $("#log").html(texte);
+                });
+        console.log("avancer");
+    });
+
 
 });

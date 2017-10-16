@@ -40,7 +40,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/Echange.o \
 	${OBJECTDIR}/GPIOClass.o \
 	${OBJECTDIR}/Gyroscope.o \
-	${OBJECTDIR}/Information.o \
 	${OBJECTDIR}/Serveur.o \
 	${OBJECTDIR}/config.o \
 	${OBJECTDIR}/main.o \
@@ -96,11 +95,6 @@ ${OBJECTDIR}/Gyroscope.o: Gyroscope.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gyroscope.o Gyroscope.cpp
-
-${OBJECTDIR}/Information.o: Information.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Information.o Information.cpp
 
 ${OBJECTDIR}/Serveur.o: Serveur.cpp 
 	${MKDIR} -p ${OBJECTDIR}

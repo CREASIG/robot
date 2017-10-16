@@ -1,8 +1,6 @@
 
 <?php
 
-$host    = "127.0.0.1";
-$port    = 8080;
 $message = "GET avance";
 echo "Message To server :".$message."<br>";
 // create socket

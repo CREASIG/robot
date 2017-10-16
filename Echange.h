@@ -14,7 +14,10 @@
 #ifndef ECHANGE_H
 #define ECHANGE_H
 
+#define TAILLE_MAX_ERROR    100
+
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -26,8 +29,32 @@ public:
 
     string getTexte();
     void setTexte(string texte);
+
+    string getInformation();
+    string getDebug();
+    string setParametre(string parametre);
+
+    void setAvancer(int a);
+    int getAvancer();
+    void setReculer(int a);
+    int getReculer();
+    void setGauche(int a);
+    int getGauche();
+    void setdroite(int a);
+    int getdroite();
+
+    void addLog(string log);
+    vector<string> getLogs();
+    
+    
 private:
     string texte;
+    int avancer;
+    int reculer;
+    int gauche;
+    int droite;
+    vector <string> log;
+    
 };
 
 #endif /* ECHANGE_H */

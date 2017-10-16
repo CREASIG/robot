@@ -12,11 +12,9 @@
  */
 
 #include "Serveur.h"
-#include "Information.h"
 
 Serveur::Serveur(Echange *echange) {
     this->echange = echange;
-    Information* information = new Information(echange);
     int sockfd, newsockfd, portno;
     socklen_t clilen;
     char buffer[256];
@@ -69,7 +67,7 @@ Serveur::Serveur(Echange *echange) {
         newsockfd = accept(sockfd, (struct sockaddr *) &cli_addr, &clilen);
         if (newsockfd < 0)
             fprintf(stderr, "ERROR on accept");
-
+        echange->addLog("coucou");
         // printf("server: got connection from %s port %d\n",inet_ntoa(cli_addr.sin_addr), ntohs(cli_addr.sin_port));
 
 
@@ -81,14 +79,16 @@ Serveur::Serveur(Echange *echange) {
         n = read(newsockfd, buffer, 255);
         if (n < 0) fprintf(stderr, "ERROR reading from socket");
         string texte(buffer);
-        if (texte.substr(0, 3) == "GET") {
-            string a = information->getInformation(texte.substr(4, texte.size() - 4).c_str());
+        if (texte.substr(0, 9) == "GET PARAM") {
+            string a = echange->getInformation();
+            send(newsockfd, a.c_str(), a.size(), 0);
+        } else if (texte.substr(0, 9) == "GET DEBUG") {
+            string a = echange->getDebug();
             send(newsockfd, a.c_str(), a.size(), 0);
         } else if (texte.substr(0, 3) == "SET") {
-            information->setInformation(texte.substr(4, texte.size() - 4).c_str());
-        }
-        else{
-            
+            echange->setParametre(string(texte.substr(4, texte.size() - 4).c_str()));
+        } else {
+
         }
         cout << "Here is the message: " << buffer << endl;
 
