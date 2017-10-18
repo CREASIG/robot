@@ -1,3 +1,13 @@
+/*
+ * Paramètres
+ */
+
+var avancer = 0;
+var reculer = 0;
+var gauche = 0;
+var droite = 0;
+
+
 $(document).ready(function () {
     $(this).keydown(function (e) {
         //bas
@@ -18,38 +28,41 @@ $(document).ready(function () {
     });
 
     $("#avancer").click(function () {
-        avancer();
+        avancer = 10;
+        console.log("avncer");
     });
     $("#gauche").click(function () {
-        gauche();
+        gauche = 10;
     });
     $("#droite").click(function () {
-        droite();
+        droite = 10;
     });
     $("#reculer").click(function () {
-        reculer();
+        droite = 10;
     });
 
-    function avancer() {
-        $.ajax({
-            method: "POST",
-            url: "setparameter.php",
-            data: {name: "John", location: "Boston"}
-        })
-                .done(function (msg) {
+
+ 
+    $(function () {
+        setInterval(function () {
+            
+            if (avancer !== 0 || reculer !== 0 || gauche !== 0 || droite !== 0) {
+                $.ajax({
+                    method: "POST",
+                    url: "setparameter.php",
+                    data: {
+                        "avancer": avancer,
+                        "reculer": reculer,
+                        "gauche": gauche,
+                        "droite": droite,
+                    }
+                }).done(function (msg) {
                     //alert("Data Saved: " + msg);
+                    avancer = reculer = droite = gauche = 0;
                 });
-        console.log("avancer");
-    }
-    function droite() {
-        console.log("droite");
-    }
-    function gauche() {
-        console.log("gauche");
-    }
-    function reculer() {
-        console.log("reculer");
-    }
+            }
+        },1000);
+    });
 
     $("#debug").click(function () {
         $.ajax({
@@ -61,9 +74,9 @@ $(document).ready(function () {
                     console.log(msg);
                     log = JSON.parse(msg);
                     console.log(log["liste"]);
-                    var texte="";
-                    for(var i = 0 ; i < log["liste"].length ; i++){
-                        texte+=log["liste"][i]["texte"]+"\n";
+                    var texte = "";
+                    for (var i = 0; i < log["liste"].length; i++) {
+                        texte += log["liste"][i]["texte"] + "\n";
                     }
                     console.log(texte);
                     $("#log").html(texte);

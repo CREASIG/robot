@@ -33,6 +33,7 @@
 #include "./servo/MG90D.h"
 #include "Echange.h"
 #include "Serveur.h"
+#include "Camera.h"
 
 
 using namespace std;
@@ -47,11 +48,20 @@ void *marche(void * echange1) {
     Echange * echange;
     echange = (Echange *) echange1;
 
-
     while (true) {
-        string texte;
-        cin >> texte;
-        echange->setTexte(texte);
+        if(echange->getAvancer()>0){
+            echange->addLog("avancer");
+        }
+        if(echange->getReculer()>0){
+            echange->addLog("reculer");
+        }
+        if(echange->getAvancer()>0){
+            echange->addLog("droite");
+        }
+        if(echange->getAvancer()>0){
+            echange->addLog("gauche");
+        }
+        sleep(1);
     }
 
 
@@ -83,6 +93,13 @@ void *marche(void * echange1) {
      */
 }
 
+void *camera(void * echange1) {
+    Echange* echange2;
+    echange2 = (Echange *) echange1;
+    Camera* camera= new Camera(echange2);
+}
+
+
 void *serveur(void * echange1) {
     Echange* echange2;
     echange2 = (Echange *) echange1;
@@ -95,6 +112,7 @@ int main(int argc, char** argv) {
 
     pthread_t tacheserveur;
     pthread_t tachemarche;
+    pthread_t tachecamera;
 
     printf("fin\n");
 
@@ -102,6 +120,7 @@ int main(int argc, char** argv) {
 
     pthread_create(&tacheserveur, NULL, serveur, (void *) &echange);
     pthread_create(&tachemarche, NULL, marche, (void *) &echange);
+    pthread_create(&tachecamera, NULL, camera, (void *) &echange);
 
     while (true);
     return 0;

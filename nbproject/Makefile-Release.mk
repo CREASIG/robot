@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/AccesI2c.o \
 	${OBJECTDIR}/AfficheurSimple.o \
+	${OBJECTDIR}/Camera.o \
 	${OBJECTDIR}/Echange.o \
 	${OBJECTDIR}/GPIOClass.o \
 	${OBJECTDIR}/Gyroscope.o \
@@ -80,6 +81,11 @@ ${OBJECTDIR}/AfficheurSimple.o: AfficheurSimple.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AfficheurSimple.o AfficheurSimple.cpp
+
+${OBJECTDIR}/Camera.o: Camera.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Camera.o Camera.cpp
 
 ${OBJECTDIR}/Echange.o: Echange.cpp 
 	${MKDIR} -p ${OBJECTDIR}

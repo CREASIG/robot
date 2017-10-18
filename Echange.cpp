@@ -17,6 +17,10 @@
 
 Echange::Echange() {
     this->texte = "";
+    this->avancer=0;
+    this->reculer=0;
+    this->gauche=0;
+    this->droite=0;
 }
 
 Echange::Echange(const Echange& orig) {
@@ -51,45 +55,64 @@ string Echange::setParametre(string parametre) {
     string nom = parametre.substr(0, parametre.find(" "));
     string valeur = parametre.substr(parametre.find(" "), parametre.size() - parametre.find(" "));
 
-    cout << "nom=" << nom << "    valeur=" << valeur << endl;
+
+    if (nom == string("avancer")) {
+        setAvancer(stoi(valeur));
+    
+    } else if (nom == string("reculer")) {
+        setReculer(stoi(valeur));
+    } else if (nom == string("gauche")) {
+        setGauche(stoi(valeur));
+    } else if (nom == string("droite")) {
+        setDroite(stoi(valeur));
+    }
     return "{}";
 }
 
 void Echange::setAvancer(int a) {
+
     this->avancer = a;
 }
 
 int Echange::getAvancer() {
+
     return avancer;
 }
 
 void Echange::setReculer(int a) {
+
     this->reculer = a;
 }
 
 int Echange::getReculer() {
+
     return reculer;
 }
 
 void Echange::setGauche(int a) {
+
     this->gauche = a;
 }
 
 int Echange::getGauche() {
+
     return gauche;
 }
 
-void Echange::setdroite(int a) {
+void Echange::setDroite(int a) {
+
     this->droite = a;
 }
 
-int Echange::getdroite() {
+int Echange::getDroite() {
+
     return droite;
 }
 
 void Echange::addLog(string message) {
     log.push_back(message);
     if (log.size() > TAILLE_MAX_ERROR) {
+
         log.erase(log.begin());
     }
 }

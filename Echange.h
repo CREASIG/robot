@@ -40,8 +40,8 @@ public:
     int getReculer();
     void setGauche(int a);
     int getGauche();
-    void setdroite(int a);
-    int getdroite();
+    void setDroite(int a);
+    int getDroite();
 
     void addLog(string log);
     vector<string> getLogs();
