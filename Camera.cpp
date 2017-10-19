@@ -15,6 +15,7 @@
 
 Camera::Camera(Echange *echange) {
     this->echange = echange;
+    system("killall uv4l");
     system("uv4l --driver raspicam --auto-video_nr --encoding h264 --width 640 --height 480 --enable-server on --server-option '--port=9000'");
 }
 

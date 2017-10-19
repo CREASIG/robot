@@ -34,6 +34,7 @@
 #include "Echange.h"
 #include "Serveur.h"
 #include "Camera.h"
+#include "Marche.h"
 
 
 using namespace std;
@@ -45,65 +46,46 @@ using namespace std;
 
 
 void *marche(void * echange1) {
-    Echange * echange;
-    echange = (Echange *) echange1;
+    
+    Marche marche((Echange *)echange1);
 
-    while (true) {
-        if(echange->getAvancer()>0){
-            echange->addLog("avancer");
-        }
-        if(echange->getReculer()>0){
-            echange->addLog("reculer");
-        }
-        if(echange->getAvancer()>0){
-            echange->addLog("droite");
-        }
-        if(echange->getAvancer()>0){
-            echange->addLog("gauche");
-        }
-        sleep(1);
-    }
+/*
+//Création de l'objet donnat l'accès au port I(Echange *)2C
 
+Gyroscope g(accesi2c, 0x19);
 
-    /*
-    //Création de l'objet donnat l'accès au port I2C
-    AccesI2c *accesi2c = new AccesI2c();
+// Création de l'objet pour l'accès au servo 0 de la carte 6F
+Servo* s = new MG90D(accesi2c, 0x6F, 0);
+Servo* s1 = new MG90D(accesi2c, 0x6F, 15);
 
-    Gyroscope g(accesi2c, 0x19);
+// fréquence du signal qui pilote le servo à 50hz
+s->setFrequence(50);
+while (true) {
+    int a = 0;
 
-    // Création de l'objet pour l'accès au servo 0 de la carte 6F
-    Servo* s = new MG90D(accesi2c, 0x6F, 0);
-    Servo* s1 = new MG90D(accesi2c, 0x6F, 15);
-
-    // fréquence du signal qui pilote le servo à 50hz
-    s->setFrequence(50);
-    while (true) {
-        int a = 0;
-
-        // Récupération de l'angle auprès de l'utilisateur
-        string texte;  
-        cin >> texte;
-        echange->setTexte(texte);
-        g.calcule();
-        a = g.getAngleX();
-        //Mise en place de l'angle
-        s->setAngle(a);
-        s1->setAngle(a*-1);
-    }
-     */
+    // Récupération de l'angle auprès de l'utilisateur
+    string texte;  
+    cin >> texte;
+    echange->setTexte(texte);
+    g.calcule();
+    a = g.getAngleX();
+    //Mise en place de l'angle
+    s->setAngle(a);
+    s1->setAngle(a*-1);
+}
+ */
 }
 
 void *camera(void * echange1) {
     Echange* echange2;
     echange2 = (Echange *) echange1;
-    Camera* camera= new Camera(echange2);
+    Camera* camera = new Camera(echange2);
 }
-
 
 void *serveur(void * echange1) {
     Echange* echange2;
     echange2 = (Echange *) echange1;
-    Serveur* s= new Serveur(echange2);
+    Serveur* s = new Serveur(echange2);
 }
 
 int main(int argc, char** argv) {

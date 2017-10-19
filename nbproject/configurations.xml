@@ -8,10 +8,13 @@
       <itemPath>AfficheurSimple.h</itemPath>
       <itemPath>Camera.h</itemPath>
       <itemPath>Echange.h</itemPath>
+      <itemPath>exception/Exception.h</itemPath>
       <itemPath>GPIOClass.h</itemPath>
       <itemPath>Gyroscope.h</itemPath>
       <itemPath>servo/MG90D.h</itemPath>
+      <itemPath>Marche.h</itemPath>
       <itemPath>Serveur.h</itemPath>
+      <itemPath>exception/ServeurException.h</itemPath>
       <itemPath>servo/Servo.h</itemPath>
       <itemPath>config.h</itemPath>
     </logicalFolder>
@@ -26,10 +29,13 @@
       <itemPath>AfficheurSimple.cpp</itemPath>
       <itemPath>Camera.cpp</itemPath>
       <itemPath>Echange.cpp</itemPath>
+      <itemPath>exception/Exception.cpp</itemPath>
       <itemPath>GPIOClass.cpp</itemPath>
       <itemPath>Gyroscope.cpp</itemPath>
       <itemPath>servo/MG90D.cpp</itemPath>
+      <itemPath>Marche.cpp</itemPath>
       <itemPath>Serveur.cpp</itemPath>
+      <itemPath>exception/ServeurException.cpp</itemPath>
       <itemPath>servo/Servo.cpp</itemPath>
       <itemPath>config.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
@@ -95,6 +101,10 @@
       </item>
       <item path="Gyroscope.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Marche.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Marche.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Serveur.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Serveur.h" ex="false" tool="3" flavor2="0">
@@ -102,6 +112,14 @@
       <item path="config.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="exception/Exception.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="exception/Exception.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="exception/ServeurException.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="exception/ServeurException.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="html/connexion.php" ex="false" tool="3" flavor2="0">
       </item>
@@ -172,6 +190,10 @@
       </item>
       <item path="Gyroscope.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Marche.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Marche.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Serveur.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Serveur.h" ex="false" tool="3" flavor2="0">
@@ -179,6 +201,14 @@
       <item path="config.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="exception/Exception.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="exception/Exception.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="exception/ServeurException.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="exception/ServeurException.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="html/connexion.php" ex="false" tool="3" flavor2="0">
       </item>

@@ -9,43 +9,62 @@ var droite = 0;
 
 
 $(document).ready(function () {
+
+ $.fn.avancer=function() {
+    avancer = 10;
+}
+
+$.fn.gauche=function() {
+    gauche = 10;
+}
+
+$.fn.droite=function() {
+    droite = 10;
+}
+
+$.fn.reculer=function() {
+    reculer = 10;
+}
+
+
+    
     $(this).keydown(function (e) {
         //bas
         switch (e.keyCode) {
             case 38:
-                avancer();
+                $.fn.avancer();
                 break;
             case 37:
-                gauche();
+                $.fn.gauche();
                 break;
             case 39:
-                droite();
+                $.fn.droite();
                 break;
             case 40:
-                reculer();
+                $.fn.reculer();
                 break;
         }
     });
 
     $("#avancer").click(function () {
-        avancer = 10;
-        console.log("avncer");
+        $.fn.avancer();
     });
     $("#gauche").click(function () {
-        gauche = 10;
+        $.fn.gauche();
     });
     $("#droite").click(function () {
-        droite = 10;
+        $.fn.droite();
     });
     $("#reculer").click(function () {
-        droite = 10;
+        $.fn.reculer();
     });
 
 
- 
     $(function () {
+
+
         setInterval(function () {
-            
+
             if (avancer !== 0 || reculer !== 0 || gauche !== 0 || droite !== 0) {
                 $.ajax({
                     method: "POST",
@@ -61,27 +80,24 @@ $(document).ready(function () {
                     avancer = reculer = droite = gauche = 0;
                 });
             }
-        },1000);
+        }, 1000);
     });
 
     $("#debug").click(function () {
         $.ajax({
             method: "POST",
             url: "debug.php",
-            data: {name: "John"}
-        })
-                .done(function (msg) {
-                    console.log(msg);
-                    log = JSON.parse(msg);
-                    console.log(log["liste"]);
-                    var texte = "";
-                    for (var i = 0; i < log["liste"].length; i++) {
-                        texte += log["liste"][i]["texte"] + "\n";
-                    }
-                    console.log(texte);
-                    $("#log").html(texte);
-                });
-        console.log("avancer");
+            data: {}
+        }).done(function (msg) {
+            log = JSON.parse(msg);
+            console.log(log["liste"]);
+            var texte = "";
+            for (var i = 0; i < log["liste"].length; i++) {
+                texte += log["liste"][i]["texte"] + "\n";
+            }
+            console.log(texte);
+            $("#log1").html(texte);
+        });
     });
 
 

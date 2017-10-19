@@ -12,6 +12,7 @@
  */
 
 #include "Serveur.h"
+//#include "exception/ServeurException.h"
 
 Serveur::Serveur(Echange *echange) {
     this->echange = echange;
@@ -23,8 +24,8 @@ Serveur::Serveur(Echange *echange) {
     // create a socket
     // socket(int domain, int type, int protocol)
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
-    if (sockfd < 0)
-        fprintf(stderr, "ERROR opening socket");
+//    if (sockfd < 0)
+//        throw ServeurException("Erreur lors de l'ouverture du port");
 
     // clear address structure
     bzero((char *) &serv_addr, sizeof (serv_addr));

@@ -43,8 +43,8 @@ string Echange::getInformation() {
 
 string Echange::getDebug() {
     string texte = "{\"liste\":[";
-    for (int i = log.size(); i > 0; --i) {
-        if (i < log.size())texte += ",";
+    for (int i = log.size()-1; i >= 0; --i) {
+        if (i < log.size()-1)texte += ",";
         texte += "{\"texte\": \"" + log[i] + "\"}";
     }
     texte += "]}";
@@ -53,19 +53,18 @@ string Echange::getDebug() {
 
 string Echange::setParametre(string parametre) {
     string nom = parametre.substr(0, parametre.find(" "));
-    string valeur = parametre.substr(parametre.find(" "), parametre.size() - parametre.find(" "));
+    string valeur = parametre.substr(parametre.find(" ")+1, parametre.size() - parametre.find(" "));
 
-
-    if (nom == string("avancer")) {
+    if (nom == "avancer") {
         setAvancer(stoi(valeur));
-    
-    } else if (nom == string("reculer")) {
+    } else if (nom == "reculer") {
         setReculer(stoi(valeur));
-    } else if (nom == string("gauche")) {
+    } else if (nom == "gauche") {
         setGauche(stoi(valeur));
-    } else if (nom == string("droite")) {
+    } else if (nom == "droite") {
         setDroite(stoi(valeur));
     }
+
     return "{}";
 }
 

@@ -41,8 +41,11 @@ OBJECTFILES= \
 	${OBJECTDIR}/Echange.o \
 	${OBJECTDIR}/GPIOClass.o \
 	${OBJECTDIR}/Gyroscope.o \
+	${OBJECTDIR}/Marche.o \
 	${OBJECTDIR}/Serveur.o \
 	${OBJECTDIR}/config.o \
+	${OBJECTDIR}/exception/Exception.o \
+	${OBJECTDIR}/exception/ServeurException.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/servo/MG90D.o \
 	${OBJECTDIR}/servo/Servo.o
@@ -102,6 +105,11 @@ ${OBJECTDIR}/Gyroscope.o: Gyroscope.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gyroscope.o Gyroscope.cpp
 
+${OBJECTDIR}/Marche.o: Marche.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Marche.o Marche.cpp
+
 ${OBJECTDIR}/Serveur.o: Serveur.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -111,6 +119,16 @@ ${OBJECTDIR}/config.o: config.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/config.o config.cpp
+
+${OBJECTDIR}/exception/Exception.o: exception/Exception.cpp 
+	${MKDIR} -p ${OBJECTDIR}/exception
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/exception/Exception.o exception/Exception.cpp
+
+${OBJECTDIR}/exception/ServeurException.o: exception/ServeurException.cpp 
+	${MKDIR} -p ${OBJECTDIR}/exception
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/exception/ServeurException.o exception/ServeurException.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
