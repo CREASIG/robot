@@ -84,32 +84,29 @@ void MPU6050::lectureGyroscope(int *a) {
 void MPU6050::calcule() {
     int accRaw[3];
     int gyrRaw[3];
-    while (true) {
-        lectureAcceleration(accRaw);
-        lectureGyroscope(gyrRaw);
+    lectureAcceleration(accRaw);
+    lectureGyroscope(gyrRaw);
 
-        float accel_xout_scaled = accRaw[0] / 16384.0;
-        float accel_yout_scaled = accRaw[1] / 16384.0;
-        float accel_zout_scaled = accRaw[2] / 16384.0;
+    float accel_xout_scaled = accRaw[0] / 16384.0;
+    float accel_yout_scaled = accRaw[1] / 16384.0;
+    float accel_zout_scaled = accRaw[2] / 16384.0;
 
-        float rotx = get_x_rotation(accRaw[0], accRaw[1], accRaw[2]);
-        float roty = get_y_rotation(accRaw[0], accRaw[1], accRaw[2]);
-        float rotz = get_z_rotation(accRaw[0], accRaw[1], accRaw[2]);
+    float rotx = get_x_rotation(accRaw[0], accRaw[1], accRaw[2]);
+    float roty = get_y_rotation(accRaw[0], accRaw[1], accRaw[2]);
+    float rotz = get_z_rotation(accRaw[0], accRaw[1], accRaw[2]);
 
-        this->anglex = rotx;
-        this->angley = roty;
-        this->anglez = rotz;
+    this->anglex = rotx;
+    this->angley = roty;
+    this->anglez = rotz;
 
-        float gyrx = gyrRaw[0] / 131;
-        float gyry = gyrRaw[1] / 131;
-        float gyrz = gyrRaw[2] / 131;
+    float gyrx = gyrRaw[0] / 131;
+    float gyry = gyrRaw[1] / 131;
+    float gyrz = gyrRaw[2] / 131;
 
-        this->gyroscopex = gyrx;
-        this->gyroscopey = gyry;
-        this->gyroscopez = gyrz;
+    this->gyroscopex = gyrx;
+    this->gyroscopey = gyry;
+    this->gyroscopez = gyrz;
 
-        printf("%d %d %d | %f %f %f |\n", gyrRaw[0], gyrRaw[1], gyrRaw[2], gyrx,gyry,gyrz);
-    }
 }
 
 int MPU6050::distance(int a, int b) {
