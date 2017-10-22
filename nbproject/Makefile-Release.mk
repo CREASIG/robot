@@ -41,6 +41,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Echange.o \
 	${OBJECTDIR}/GPIOClass.o \
 	${OBJECTDIR}/Gyroscope.o \
+	${OBJECTDIR}/MPU6050.o \
 	${OBJECTDIR}/Marche.o \
 	${OBJECTDIR}/Serveur.o \
 	${OBJECTDIR}/config.o \
@@ -104,6 +105,11 @@ ${OBJECTDIR}/Gyroscope.o: Gyroscope.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gyroscope.o Gyroscope.cpp
+
+${OBJECTDIR}/MPU6050.o: MPU6050.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MPU6050.o MPU6050.cpp
 
 ${OBJECTDIR}/Marche.o: Marche.cpp 
 	${MKDIR} -p ${OBJECTDIR}

@@ -47,6 +47,7 @@ using namespace std;
 
 void *marche(void * echange1) {
     
+//Gyroscope g(accesi2c, 0x68);
     Marche marche((Echange *)echange1);
 
 /*
@@ -100,10 +101,11 @@ int main(int argc, char** argv) {
 
     Echange echange;
 
-    pthread_create(&tacheserveur, NULL, serveur, (void *) &echange);
+//    pthread_create(&tacheserveur, NULL, serveur, (void *) &echange);
     pthread_create(&tachemarche, NULL, marche, (void *) &echange);
-    pthread_create(&tachecamera, NULL, camera, (void *) &echange);
+//    pthread_create(&tachecamera, NULL, camera, (void *) &echange);
 
+    
     while (true);
     return 0;
 }

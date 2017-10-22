@@ -16,10 +16,13 @@
 #include "Marche.h"
 #include "AccesI2c.h"
 #include "servo/MG90D.h"
+#include "MPU6050.h"
 
 Marche::Marche(Echange * echange) {
     this->echange = echange;
     AccesI2c *accesi2c = new AccesI2c();
+    MPU6050 mp(accesi2c,0x68);
+    mp.calcule();
     Servo* s = new MG90D(accesi2c, 0x40, 0);
     s->setFrequence(50);
     int angle =0;
