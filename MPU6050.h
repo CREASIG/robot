@@ -18,12 +18,14 @@
 
 #include "MPU6050_Register.h"
 #include "AccesI2c.h"
+#include "GPIOClass.h"
+
 
 #define M_PIl          3.141592653589793238462643383279502884L /* pi */
 
 class MPU6050 {
 public:
-    MPU6050(AccesI2c* acces, int adressecarte);
+    MPU6050(AccesI2c* acces, int adressecarte,int numero);
     MPU6050(const MPU6050& orig);
     virtual ~MPU6050();
 
@@ -57,6 +59,10 @@ private:
     int gyroscopex;
     int gyroscopey;
     int gyroscopez;
+    int numero;
+    
+    GPIOClass *gpio;
+    
 };
 
 #endif /* MPU6050_H */

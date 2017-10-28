@@ -21,26 +21,32 @@
 Marche::Marche(Echange * echange) {
     this->echange = echange;
     AccesI2c *accesi2c = new AccesI2c();
-    MPU6050 mp(accesi2c,0x68);
-    mp.calcule();
+    MPU6050 mp(accesi2c, 0x68, 4);
+    MPU6050 mp1(accesi2c, 0x68, 5);
+    while (true) {
+        mp.calcule();
+        mp1.calcule();
+        cout << "angle1  x=" << mp.getAngleX() << "  y=" << mp.getAngleY() << "  angle2  x1=" << mp1.getAngleX() << "  y1=" << mp1.getAngleY() << endl;
+    }
+
     Servo* s = new MG90D(accesi2c, 0x40, 0);
     s->setFrequence(50);
-    int angle =0;
-    
+    int angle = 0;
+
     while (true) {
-        if(angle<-60)
-            angle=-60;
-        if(angle>60)
-            angle=60;
-        
+        if (angle<-60)
+            angle = -60;
+        if (angle > 60)
+            angle = 60;
+
         if (echange->getAvancer() > 0) {
             echange->addLog("avancer");
-            angle+=echange->getAvancer();
+            angle += echange->getAvancer();
             s->setAngle(angle);
             echange->setAvancer(0);
         }
         if (echange->getReculer() > 0) {
-            angle-=echange->getReculer();
+            angle -= echange->getReculer();
             s->setAngle(angle);
             echange->addLog("reculer");
             echange->setReculer(0);
@@ -54,7 +60,7 @@ Marche::Marche(Echange * echange) {
             echange->setGauche(0);
         }
         usleep(500);
-        
+
     }
 }
 

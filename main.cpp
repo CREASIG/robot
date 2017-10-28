@@ -101,9 +101,9 @@ int main(int argc, char** argv) {
 
     Echange echange;
 
-//    pthread_create(&tacheserveur, NULL, serveur, (void *) &echange);
+    pthread_create(&tacheserveur, NULL, serveur, (void *) &echange);
     pthread_create(&tachemarche, NULL, marche, (void *) &echange);
-//    pthread_create(&tachecamera, NULL, camera, (void *) &echange);
+    pthread_create(&tachecamera, NULL, camera, (void *) &echange);
 
     
     while (true);

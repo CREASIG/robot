@@ -15,10 +15,12 @@
 #include "AccesI2c.h"
 #include "Gyroscope.h"
 
-MPU6050::MPU6050(AccesI2c *acces, int adressecarte) {
+MPU6050::MPU6050(AccesI2c *acces, int adressecarte,int numero) {
+    this->gpio=new GPIOClass(this->numero);
     this->acces = acces;
     this->adressecarte = adressecarte;
     this->acces->selectionComposant(adressecarte);
+    this->numero=numero;
 
     acces->ecrireRegistre8bit(MPU6050_RA_GYRO_CONFIG, 0b00000000);
     acces->ecrireRegistre8bit(MPU6050_RA_PWR_MGMT_1, 0b00000010);
@@ -82,6 +84,8 @@ void MPU6050::lectureGyroscope(int *a) {
 }
 
 void MPU6050::calcule() {
+    this->gpio->setval_gpio(1);
+    //usleep(1000);
     int accRaw[3];
     int gyrRaw[3];
     lectureAcceleration(accRaw);
@@ -106,6 +110,8 @@ void MPU6050::calcule() {
     this->gyroscopex = gyrx;
     this->gyroscopey = gyry;
     this->gyroscopez = gyrz;
+    this->gpio->setval_gpio(0);
+    //usleep(1000);
 
 }
 
