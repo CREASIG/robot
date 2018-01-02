@@ -16,8 +16,8 @@
 
 #include "Servo.h"
 
-#define __VALEUR_MIN  158
-#define __VALEUR_MAX  500
+#define __VALEUR_MIN  1740//158
+#define __VALEUR_MAX  1930//500
 
 #define __ANGLE_MIN     -60
 #define __ANGLE_MAX     60
@@ -31,6 +31,7 @@ public:
     
     // Mettre le servo dans un angle particulier
     virtual void setAngle(int angle);
+    
     
 private:
 

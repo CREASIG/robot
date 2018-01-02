@@ -7,15 +7,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/eric/NetBeansProjects/robot/Gyroscope.h</file>
-            <file>file:/home/eric/NetBeansProjects/robot/MPU6050.h</file>
-            <file>file:/home/eric/NetBeansProjects/robot/GPIOClass.cpp</file>
-            <file>file:/home/eric/NetBeansProjects/robot/MPU6050.cpp</file>
-            <file>file:/home/eric/NetBeansProjects/robot/Gyroscope.cpp</file>
-            <file>file:/home/eric/NetBeansProjects/robot/Marche.cpp</file>
-            <file>file:/home/eric/NetBeansProjects/robot/AccesI2c.cpp</file>
-            <file>file:/home/eric/NetBeansProjects/robot/MPU6050_Register.h</file>
-            <file>file:/home/eric/NetBeansProjects/robot/GPIOClass.h</file>
+            <file>file:/home/eric/NetBeansProjects/robot/TestServo.cpp</file>
+            <file>file:/home/eric/NetBeansProjects/robot/servo/MG90D.cpp</file>
+            <file>file:/home/eric/NetBeansProjects/robot/servo/MG90D.h</file>
+            <file>file:/home/eric/NetBeansProjects/robot/TestServo.h</file>
+            <file>file:/home/eric/NetBeansProjects/robot/servo/Servo.cpp</file>
             <file>file:/home/eric/NetBeansProjects/robot/main.cpp</file>
         </group>
     </open-files>

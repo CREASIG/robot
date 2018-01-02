@@ -43,6 +43,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/MPU6050.o \
 	${OBJECTDIR}/Marche.o \
 	${OBJECTDIR}/Serveur.o \
+	${OBJECTDIR}/TestServo.o \
 	${OBJECTDIR}/config.o \
 	${OBJECTDIR}/exception/Exception.o \
 	${OBJECTDIR}/exception/ServeurException.o \
@@ -75,72 +76,77 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/robot: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/robot ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/AccesI2c.o: AccesI2c.cpp 
+${OBJECTDIR}/AccesI2c.o: AccesI2c.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AccesI2c.o AccesI2c.cpp
 
-${OBJECTDIR}/Camera.o: Camera.cpp 
+${OBJECTDIR}/Camera.o: Camera.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Camera.o Camera.cpp
 
-${OBJECTDIR}/Echange.o: Echange.cpp 
+${OBJECTDIR}/Echange.o: Echange.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Echange.o Echange.cpp
 
-${OBJECTDIR}/GPIOClass.o: GPIOClass.cpp 
+${OBJECTDIR}/GPIOClass.o: GPIOClass.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/GPIOClass.o GPIOClass.cpp
 
-${OBJECTDIR}/Gyroscope.o: Gyroscope.cpp 
+${OBJECTDIR}/Gyroscope.o: Gyroscope.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gyroscope.o Gyroscope.cpp
 
-${OBJECTDIR}/MPU6050.o: MPU6050.cpp 
+${OBJECTDIR}/MPU6050.o: MPU6050.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MPU6050.o MPU6050.cpp
 
-${OBJECTDIR}/Marche.o: Marche.cpp 
+${OBJECTDIR}/Marche.o: Marche.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Marche.o Marche.cpp
 
-${OBJECTDIR}/Serveur.o: Serveur.cpp 
+${OBJECTDIR}/Serveur.o: Serveur.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Serveur.o Serveur.cpp
 
-${OBJECTDIR}/config.o: config.cpp 
+${OBJECTDIR}/TestServo.o: TestServo.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/TestServo.o TestServo.cpp
+
+${OBJECTDIR}/config.o: config.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/config.o config.cpp
 
-${OBJECTDIR}/exception/Exception.o: exception/Exception.cpp 
+${OBJECTDIR}/exception/Exception.o: exception/Exception.cpp
 	${MKDIR} -p ${OBJECTDIR}/exception
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/exception/Exception.o exception/Exception.cpp
 
-${OBJECTDIR}/exception/ServeurException.o: exception/ServeurException.cpp 
+${OBJECTDIR}/exception/ServeurException.o: exception/ServeurException.cpp
 	${MKDIR} -p ${OBJECTDIR}/exception
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/exception/ServeurException.o exception/ServeurException.cpp
 
-${OBJECTDIR}/main.o: main.cpp 
+${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
-${OBJECTDIR}/servo/MG90D.o: servo/MG90D.cpp 
+${OBJECTDIR}/servo/MG90D.o: servo/MG90D.cpp
 	${MKDIR} -p ${OBJECTDIR}/servo
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/servo/MG90D.o servo/MG90D.cpp
 
-${OBJECTDIR}/servo/Servo.o: servo/Servo.cpp 
+${OBJECTDIR}/servo/Servo.o: servo/Servo.cpp
 	${MKDIR} -p ${OBJECTDIR}/servo
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/servo/Servo.o servo/Servo.cpp
@@ -151,7 +157,6 @@ ${OBJECTDIR}/servo/Servo.o: servo/Servo.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/robot
 
 # Subprojects
 .clean-subprojects:

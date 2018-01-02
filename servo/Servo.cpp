@@ -11,10 +11,6 @@
  * Created on 25 août 2017, 17:01
  */
 
-
-
-
-
 #include "Servo.h"
 
 Servo::Servo(AccesI2c *accesi2c, uint8_t numerocarte, uint8_t numeroservo) {
@@ -23,15 +19,15 @@ Servo::Servo(AccesI2c *accesi2c, uint8_t numerocarte, uint8_t numeroservo) {
     this->adresseservo = numeroservo;
     this->accesservo = accesi2c;
     accesservo->selectionComposant(numerocarte);
-    cout << "écriture dans __MODE2" << endl;
+//    cout << "écriture dans __MODE2" << endl;
 //    accesservo->ecrireRegistre8bit(__MODE2, __OUTDRV);
-    cout << "écriture dans __MODE1" << endl;
+//    cout << "écriture dans __MODE1" << endl;
     accesservo->ecrireRegistre8bit(__MODE1, __ALLCALL);
     usleep(5000);
-    cout << "Lecture dans __MODE1" << endl;
+//    cout << "Lecture dans __MODE1" << endl;
     uint8_t modele = accesservo->lectureRegistre8bit(__MODE1);
-    printf("mode1=%x\n", modele);
-    cout << "écriture dans __MODE1" << endl;
+//    printf("mode1=%x\n", modele);
+//    cout << "écriture dans __MODE1" << endl;
     accesservo->ecrireRegistre8bit(__MODE1, modele | __SLEEP);
     usleep(5000);
     accesservo->ecrireRegistre8bit(__MODE1, 0x1);
@@ -50,8 +46,8 @@ uint Servo::getValeur() {
     return valeur;
 }
 
-void Servo::setValeur(uint on, uint off) {
-
+void Servo::setValeur(uint on) {
+    int off=4096-on;
     accesservo->selectionComposant(adressecarte);
     accesservo->ecrireRegistre8bit(__LED0_ON_L + 4 * adresseservo, on & 0xFF);
     accesservo->ecrireRegistre8bit(__LED0_ON_H + 4 * adresseservo, on >> 8);
@@ -97,6 +93,7 @@ void Servo::setFrequence(int frequence) {
     usleep(5000);
 
 }
+
 
 /*
  Configuration du servo

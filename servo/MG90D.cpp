@@ -33,6 +33,6 @@ void MG90D::setAngle(int angle) {
 
     int angle1 = angle + __ANGLE_MAX;
     int val = (angle1 * (__VALEUR_MAX- __VALEUR_MIN)/(__ANGLE_MAX-__ANGLE_MIN))+__VALEUR_MIN;
-    setValeur(this->getAdresseServo(), val);
+    setValeur( val);
 
 }

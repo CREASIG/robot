@@ -101,7 +101,7 @@ public:
     uint getValeur();
     
     // Mettre une valeur au servo
-    void setValeur(uint on, uint off);
+    void setValeur(uint on);
     
     //Mettre une valeur à tous les servo
     void setAllValeur(uint on, uint off);

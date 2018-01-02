@@ -21,7 +21,7 @@ AccesI2c::AccesI2c() {
     sprintf(nomfichier, "/dev/i2c-%d", 1);
     this->fichier = open(nomfichier, O_RDWR);
     if (this->fichier < 0) {
-        printf("Impossible de sélectionner le bus I2C !");
+        printf("Impossible de sélectionner le bus I2C !\n");
         exit(1);
     }
 
@@ -43,7 +43,7 @@ void AccesI2c::selectionComposant(int adresse) {
 void AccesI2c::ecrireRegistre8bit(int adresseregistre, __u8 valeur) {
     int result = i2c_smbus_write_byte_data(this->fichier, adresseregistre, valeur);
     if (result < 0) {
-        printf("Echec d'écriture dans le registre I2C à l'adresse %X du composant %X.",adresseregistre,this->adresse);
+        printf("Echec d'écriture dans le registre I2C à l'adresse %X du composant %X.\n",adresseregistre,this->adresse);
         exit(1);
     }
 }
@@ -51,7 +51,7 @@ void AccesI2c::ecrireRegistre8bit(int adresseregistre, __u8 valeur) {
 int AccesI2c::lectureRegistre8bit(int adresseregistre) {
     int result = i2c_smbus_read_byte_data(this->fichier, adresseregistre);
     if (result == -1) {
-        printf("Echec de lecture dans le registre I2C à l'adresse %X du composant %X.",adresseregistre,this->adresse);
+        printf("Echec de lecture dans le registre I2C à l'adresse %X du composant %X.\n",adresseregistre,this->adresse);
         exit(1);
     }
     return result;
@@ -62,7 +62,7 @@ void  AccesI2c::lectureBlock(uint8_t adresseregistre, uint8_t taille, uint8_t *d
     int resultat = i2c_smbus_read_i2c_block_data(fichier, adresseregistre, taille, donnee);
     if (resultat != taille)
     {
-        printf("Echec de lecture du block de l'I2C à l'adresse %X.",adresseregistre);
+        printf("Echec de lecture du block de l'I2C à l'adresse %X.\n",adresseregistre);
         exit(1);
     }
 }
